@@ -5,10 +5,7 @@ let game = [
     answers: ["Avianca", "KLM", "Qantas"],
     answerGood: "KLM",
     image: " ./images/plane.svg"
-  }
-];
-let otros = [
-  
+  },
   {
     id: 2,
 
@@ -47,7 +44,8 @@ let otros = [
 // { A: "Avianca", B: "KLM", C: "Qantas" },
 class Model {
    constructor () {
-      this.todos = game;
+     this.num = 0;
+      this.todos = game[this.num];
       console.log( this.todos)
        this.newFunction();
       this.render = undefined; // no definido
@@ -83,33 +81,20 @@ class Model {
 
 const App = ({ title, model, game }) => { 
  
-    const items = model.todos.map((todo, index) => {
-      const answe = model.todos[index].answers.map(a => {
-        return <div>
-            <button onClick={() => alert('funciona button')}>
-              {a}
-            </button>
-          </div>;
-        console.log(a);
-      });
+    // const items = model.todos.map((todo, index) => {
+      // const answe = model.todos.answers.map(a => {
+        // return
+
+        // console.log(a);
+      // });
       //  console.log("id:" + todo.id, "questions:" + todo.question, "answer:" + todo.answers, "answer:" + todo.answerGood);
       //  console.log("index:" + index);
-      return(
-      <div>
-      <div >
-      {todo.question}
-      </div>
-        <div className="col-md-12 container-fluid">
-          <div className="answers row">
-            {answe}
-          </div>
-        </div>
-        <div>
-          <img src={todo.image} width="250" height="250" />
-        </div>
-      </div>)
+      // return(
+      // <div>
+     
+      // </div>)
 
-    });
+    // });
    return <section>
        <div className="contenedor container-fluid text-center">
          <div className="row">
@@ -117,7 +102,21 @@ const App = ({ title, model, game }) => {
              <div id="divInterno">
                <div className="row">
                  <div id="questions">
-                   {items}
+                 <div >
+      {model.todos.question}
+      </div>
+        <div className="col-md-12 container-fluid">
+          <div className="answers row">
+          <div>
+            <button onClick={() => model.num++}>
+              {model.todos.answers[model.num]}
+            </button>
+          </div>
+          </div>
+        </div>
+        <div>
+          <img src={model.todos.image} width="250" height="250" />
+        </div>
                  </div>
                </div>
                <div />
