@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+* {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #FDE6DB;
+  transition: 3s;
+}
+
+.btnQuiz {
+  transition: 3s;
+  margin: 4% 0%;
+  padding: 3%;
+  font-size: 1.5em;
+}
+
+.btnQuiz:hover {
+  color: firebrick;
+}
+
+header {
+  padding: 5%;
+}
+
+.colorGreen {
+  color: green;
+}
+
+#divInterno {
+  margin: 2%;
+  padding: 3%;
+  background-color: #FFFFFF !important;
+  transition: 3s;
+}
+
+#divInterno>* {
+  background-color: #FFFFFF !important;
+}
+
+p a {
+  color: black;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+}
+
+.fixed {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.fixed .btn-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.fixed i {
+  background-color: inherit;
+  position: relative;
+}
+
+.social {
+  padding: 3%;
+}
+
+.contenedor {}
+
+footer {
+  padding: 7%;
+}
