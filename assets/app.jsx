@@ -4,7 +4,7 @@ let game = [
     question: "Which is the oldest airline in the world?",
     answers: ["Avianca", "KLM", "Qantas"],
     answerGood: "KLM",
-    image: " ./images/plane.svg"
+    image: " assets/images/plane.svg"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ let game = [
     answers: ["Port of Shanghai", " Port of Singapore", "Port of Rotterdam"],
 
     answerGood: "KLM",
-    image: " images/ship.svg"
+    image: " assets/images/ship.svg"
   },
 
   {
@@ -22,7 +22,7 @@ let game = [
     question: "What is the longest distance cycling backwards?",
     answers: ["89.30km", "675.10km", "337.60km"],
     answerGood: "KLM",
-    image: " images/bycicle.svg"
+    image: " assets/images/bycicle.svg"
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ let game = [
     question: "What is the highest speed ever reached by a school bus?",
     answers: ["590 km/h", "320 km/h", "245 km/h"],
     answerGood: "KLM",
-    image: " images/bus.svg"
+    image: " assets/images/bus.svg"
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ let game = [
     question: "What is the longest car trip on one tank of gas?",
     answers: ["2617 km", "3568 km", "1732 km"],
     answerGood: "KLM",
-    image: " images/truck.svg"
+    image: " assets/images/truck.svg"
   }
 ];
 // { A: "Avianca", B: "KLM", C: "Qantas" },
@@ -59,6 +59,7 @@ class Model {
       console.log(this.todos.map((e, i )=> i));
 
       this.render(); // llama a render que solo actualiza
+      this.num++;
    }
 
    updateTodo(index, todo) {
@@ -75,8 +76,13 @@ class Model {
 //        }
 //    }
     newFunction() {
-        this.inputValue = null; //  vacio
+   
+      function functionMas() {
+        alert('d');
+      }
+        // this.inputValue = null; //  vacio
     }
+ 
 }
 
 const App = ({ title, model, game }) => { 
@@ -108,7 +114,7 @@ const App = ({ title, model, game }) => {
         <div className="col-md-12 container-fluid">
           <div className="answers row">
           <div>
-            <button onClick={() => model.num++}>
+            <button onClick={(model) => model.newFunction }>
               {model.todos.answers[model.num]}
             </button>
           </div>
